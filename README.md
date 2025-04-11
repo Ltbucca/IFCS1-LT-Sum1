@@ -65,11 +65,11 @@ Click `Calculate` button or hit the Return key to check your answer:
 
 <img width="672" alt="Screenshot 2025-04-11 at 19 35 01" src="https://github.com/user-attachments/assets/bf9e0536-b312-43b7-ae67-e2919feed101" />
 
-If the answer given is correct the following message is displayed for 4 seconds:
+If the answer given is correct the following message is displayed for 3 seconds:
 
 <img width="735" alt="Screenshot 2025-04-11 at 19 37 28" src="https://github.com/user-attachments/assets/cd61ac5c-34ca-4f9a-9bf0-ad85948c0211" />
 
-If the answer proves to be incorrect the following message is displayed for 4 seconds:
+If the answer proves to be incorrect the following message is displayed for 3 seconds:
 
 <img width="794" alt="Screenshot 2025-04-11 at 19 36 33" src="https://github.com/user-attachments/assets/f2bba22b-0043-4593-a3d7-d56812ab24ba" />
 
