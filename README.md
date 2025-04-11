@@ -3,6 +3,8 @@
 
 # LINEAR EQUATION TEST with a Python Script ➕➖➕🐍🐍🐍
 
+## User Documentation
+
 ### Overview
 
 The project provides a Python-based tool to test your knowledge and understanding of simple linear equations. This guide will help you set up and run the linear equation test on your local machine.
@@ -111,9 +113,9 @@ The application window is built using `tkinter.Tk`, and UI components (labels, b
 
 ### Linear Equation Quiz
 Questions are randomly generated in one of three formats:<br />
-`ax = b`<br />
-`ax + c = b`<br />
-`ax - c = b`<br />
+- `ax = b`<br />
+- `ax + c = b`<br />
+- `ax - c = b`<br />
 The user is prompted to solve for `x`.
 
 ### Test Control
