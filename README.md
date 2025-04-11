@@ -17,7 +17,7 @@ Before you begin, make sure the following are installed:
 
 1. Install Python 3.x
 
-   - Windows: Download from [python.org](https://www.python.org/downloads/windows/)
+   - Windows: Download from [python.org](https://www.python.org/downloads/windows/) 
    - macOS: Download from [python.org](https://www.python.org/downloads/mac-osx/)
 
    After downloading, run the installer and follow the on-screen instructions. Make sure to tick the box that says "Add Python to PATH" during installation.
@@ -36,15 +36,16 @@ You should have the following tkinter GUI pop up:
 
 - Windows:
 ![GUI Windows Setup](https://github.com/user-attachments/assets/71d0c42b-a07b-446c-8647-810fe496342a)
-
+<br />
 
 - macOS:
 <img width="867" alt="Linear Equation Test App" src="https://github.com/user-attachments/assets/36eaafb9-4054-4b99-be3f-d330167237b2" />
+<br />
 
    To save duplicating information moving forward the guide will concentrate on the mac version of the GUI but every action is the same in the Windows version.
 
   
-To begin click on the #Start Test# button or hit the Return key:
+To begin click on the `Start Test` button or hit the Return key:
 
 <img width="543" alt="Screenshot 2025-04-11 at 19 30 37" src="https://github.com/user-attachments/assets/b003d650-3781-4ace-a915-dd629760e148" />
 
@@ -58,7 +59,7 @@ Enter your best answer to two decimal places or less in the answer box:
 
 <img width="673" alt="Screenshot 2025-04-11 at 19 32 35" src="https://github.com/user-attachments/assets/dae86c5a-5db5-4e05-a3d5-4f86acea2852" />
 
-Click #Calculate# button or hit the Return key to check your answer:
+Click `Calculate` button or hit the Return key to check your answer:
 
 <img width="672" alt="Screenshot 2025-04-11 at 19 35 01" src="https://github.com/user-attachments/assets/bf9e0536-b312-43b7-ae67-e2919feed101" />
 
@@ -85,9 +86,62 @@ To take another test just repeat the process:
 
 ### Project Structure
 
-'''
-IFCS1-LT-Sum1/
+```
+IFCS1-LT-Sum1/Summative-1-Task-1/
+├── linear_equation_test_app.py        # Main script for linear equation test app
+```
 
+### linear_equation_test_app.py
+
+This script creates a simple GUI-based test for solving basic linear equations using the tkinter module. It includes:
+
+A DPI-awareness function for improved display scaling on Windows.
+
+A main application class ```LinearEquationTest``` that initialises and displays the test window.
+
+A Test frame class that manages question generation, input validation, scoring, and user feedback.
+
+### Key Features:
+
+### DPI Support
+A helper function `set_dpi_awareness()` ensures clear visuals on high-resolution screens.
+
+### GUI Construction with Tkinter
+The application window is built using `tkinter.Tk`, and UI components (labels, buttons, entries) are arranged with grid layout.
+
+### Linear Equation Quiz
+Questions are randomly generated in one of three formats:<br />
+`ax = b`<br />
+`ax + c = b`<br />
+`ax - c = b`<br />
+The user is prompted to solve for `x`.
+
+### Test Control
+The user can start# the test with a button or by pressing the Enter key. Answers are checked for correctness, and feedback is shown with emojis for encouragement.
+
+### Scoring System
+Each correct answer increases the score, and the final percentage is displayed when the test is complete.
+
+### Error Handling
+The `check_answer()` method uses a `try/except` block to catch and handle invalid input (non-numeric answers).
+
+### Example Flow:
+
+1 - Launch the app.<br /><br />
+2 - Click "Start Test" to begin.<br /><br />
+3 - Solve the equation shown.<br /><br />
+4 - Enter the answer rounded to two decimal places.<br /><br />
+5 - Receive feedback and see progress.<br /><br />
+6 - Final results are shown after completing the set number of questions (default: 5).
+
+### Dependencies
+
+- The script uses only Python’s built-in libraries: `tkinter` and `random`.
+- No external packages or installations are required.
+
+### Links
+
+tkinter: [python.org](https://docs.python.org/3/library/tkinter.html).
 
 
 
