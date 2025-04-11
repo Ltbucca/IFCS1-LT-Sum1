@@ -28,7 +28,7 @@ class LinearEquationTest(tk.Tk): # Application Window which inherits from tk.Tk
 
         # Create and display the Test frame
         frame = Test(self, padding=(100, 60))
-        frame.grid() 
+        frame.grid()
 
         # Bind the Enter key to start and check answers
         self.bind("<Return>", frame.start_test)
@@ -41,7 +41,7 @@ class Test(ttk.Frame):
         super().__init__(container, **kwargs)
 
         # Declare variables for test state and GUI updates
-        
+
         self.equation = tk.StringVar() # Current equation to display
         self.answer_entry = tk.StringVar() # User's answer input
         self.solution = tk.StringVar() # Correct solution for the current eqaution
@@ -81,7 +81,7 @@ class Test(ttk.Frame):
         user_answer_label.grid(column=0, row=3, sticky="EW")
         user_answer_var.grid(column=1, row=3, sticky="EW")
         self.calc_button.grid(column=2, row=3, sticky="EW") # Calculate button
-        
+
         user_answer_var.focus()  # Set focus to answer entry field
 
         feedback_label.grid(column=0, row=4, sticky="EW")
@@ -109,7 +109,7 @@ class Test(ttk.Frame):
         self.calc_button['state'] = 'normal' # Enable the Calculate button
         self.score_display.set("") # Clear score display
         self.generate_equation()    # Generate the first equation
-        
+
     def generate_equation_data(self):
         """
         Generate the equation and solution based on random parameters.
@@ -170,15 +170,15 @@ class Test(ttk.Frame):
             self.score_display.set(f"{int((self.correct_count / self.total_questions) * 100)}%")
 
             if self.total_questions == self.max_questions_value: # Check if the test is complete
-                self.finish_quiz()  # Finish the test 
+                self.finish_quiz()  # Finish the test
                 self.calc_button.state(['disabled'])  # Disable Calculate button
 
             else:
-                self.after(2000, self.generate_equation)  # Generate next question after delay
+                self.after(3000, self.generate_equation)  # Generate next question after delay
 
         except ValueError: # Handle invalid input
             messagebox.showerror("❌❌❌Error❌❌❌", "Please enter a valid number")
-    
+
     def finish_quiz(self):
         """
         Display final score.
@@ -191,9 +191,9 @@ class Test(ttk.Frame):
         self.progress_display.set("")
         self.equation.set("")
         messagebox.showinfo("TEST OVER",
-                            f"👏👏👏👏Test complete👏👏👏👏\n\nYou scored {self.correct_count} out of {self.total_questions} correct.\nFinal score: {final_score}%") 
+                            f"👏👏👏👏Test complete👏👏👏👏\n\nYou scored {self.correct_count} out of {self.total_questions} correct.\nFinal score: {final_score}%")
         self.score_display.set("") # Clear score display
-        
+
 
 if __name__ == "__main__":
     # Create an instance of the application
@@ -207,3 +207,4 @@ if __name__ == "__main__":
 
     # Run the main application loop
     root.mainloop()
+
